@@ -1,5 +1,9 @@
+.PHONY: fmt
+fmt:
+	clang-format -i *.c */*.c */*.h
+
 .PHONY: build
-build:
+build: fmt
 	cc mkr.c mackerelclient/env.c -o mkr
 
 .PHONY: mkrc

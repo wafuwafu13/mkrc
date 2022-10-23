@@ -1,1 +1,1 @@
-char* get_apikey();
+char *get_apikey();
