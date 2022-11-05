@@ -6,8 +6,8 @@
 #include <string.h>
 
 typedef struct {
-  char *data;  // response data from server
-  size_t size; // response size of data
+  char *data;
+  size_t size;
 } MEMFILE;
 
 MEMFILE *memfopen() {
@@ -29,7 +29,7 @@ size_t memfwrite(char *ptr, size_t size, size_t nmemb, void *stream) {
   MEMFILE *mf = (MEMFILE *)stream;
   int block = size * nmemb;
   if (!mf)
-    return block; // through
+    return block;
   if (!mf->data)
     mf->data = (char *)malloc(block);
   else
