@@ -4,7 +4,7 @@ fmt:
 
 .PHONY: build
 build: fmt
-	cc mkr.c mackerelclient/env.c mackerelclient/host.c -lcurl -o mkr
+	cc mkr.c mackerelclient/env.c mackerelclient/host.c -l curl -l jansson -o mkr
 
 .PHONY: mkrc
 mkrc: build
